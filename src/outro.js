@@ -1,11 +1,11 @@
 	// CommonJS, AMD, script tag
 	if (typeof exports !== 'undefined') {
-		module.exports = gcd;
+		module.exports = sieve;
 	} else if (typeof define === 'function' && define.amd) {
 		define(() => {
-			return gcd;
+			return sieve;
 		});
 	} else {
-		global.gcd = gcd;
+		global.sieve = sieve;
 	}
 }(typeof window !== 'undefined' ? window : global));

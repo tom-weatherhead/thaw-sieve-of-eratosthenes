@@ -1,0 +1,22 @@
+{
+  "name": "thaw-sieve",
+  "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
+  "keywords": ["Eratosthenes", "sieve"],
+  "homepage": "https://github.com/tom-weatherhead/thaw-sieve",
+  "main": ["./lib/thaw-sieve.js"],
+  "ignore": [
+    "test",
+    ".gitignore"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tom-weatherhead/thaw-sieve.git"
+  },
+  "authors": [
+    {
+      "name": "Tom Weatherhead",
+      "homepage": "https://github.com/tom-weatherhead"
+    }
+  ],
+  "license": "MIT"
+}

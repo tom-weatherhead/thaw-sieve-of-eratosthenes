@@ -1,8 +1,8 @@
 {
   "name": "thaw-sieve-of-eratosthenes",
   "version": "0.0.0",
-  "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript component",
-  "main": "lib/thaw-gcd",
+  "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
+  "main": "lib/thaw-sieve-of-eratosthenes",
   "homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes#readme",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
   },
   "keywords": [
     "Eratosthenes",
-	"prime",
+    "prime",
     "sieve"
   ],
   "license": "MIT",
