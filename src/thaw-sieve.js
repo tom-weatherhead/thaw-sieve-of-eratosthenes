@@ -20,17 +20,8 @@
 		let result = [2];
 
 		for (let m = 3; m < n; m += 2) {
-			let isPrime = true;
 
-			result.forEach(p => {
-
-				if (m % p === 0) {
-					isPrime = false;
-					//break;
-				}
-			});
-
-			if (isPrime) {
+			if (!result.some(p => m % p === 0)) {
 				result.push(m);
 			}
 		}
