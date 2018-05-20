@@ -1,12 +1,3 @@
-/**
- * thaw-sieve-of-eratosthenes
- *
- * @copyright 2018 Tom Weatherhead
- * @license MIT
- * @version 0.0.0
- */
-(function (global) {
-
 	/**
 	 * isPrime
 	 *
@@ -121,22 +112,3 @@
 
 		//return factors;
 	}
-
-	// CommonJS, AMD, script tag
-	if (typeof exports !== 'undefined') {
-		module.exports = {
-			sieve: sieve,
-			factorize: factorize
-		};
-	} else if (typeof define === 'function' && define.amd) {
-		define(() => {
-			return {
-				sieve: sieve,
-				factorize: factorize
-			};
-		});
-	} else {
-		global.sieve = sieve;
-		global.factorize = factorize;
-	}
-}(typeof window !== 'undefined' ? window : global));

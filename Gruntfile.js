@@ -22,8 +22,7 @@ module.exports = function (grunt) {
 				src: [
 					'<banner>',
 					'src/intro.js',
-					//'src/<%= pkg.name %>.js',
-					'src/thaw-sieve.js',
+					'src/<%= pkg.name %>.js',
 					'src/outro.js'
 				],
 				dest: 'lib/<%= pkg.name %>.es6.js'
@@ -37,7 +36,6 @@ module.exports = function (grunt) {
 			dist: {
 				files: {
 					'lib/<%= pkg.name %>.js': 'lib/<%= pkg.name %>.es6.js'
-					//'lib/thaw-sieve-of-eratosthenes.js': 'lib/thaw-sieve-of-eratosthenes.es6.js'
 				}
 			}
 		},
@@ -45,8 +43,10 @@ module.exports = function (grunt) {
 			// ThAW: Why not lint all .js files in the repo?
 			target: [
 				'*.js',
+				// Do not lint 'lib/<%= pkg.name %>.js',
+				// Do not lint 'lib/<%= pkg.name %>.min.js',
 				'lib/<%= pkg.name %>.es6.js',
-				// 'lib/<%= pkg.name %>.js',
+				// Do not lint 'lib/<%= pkg.name %>.es6.min.js',
 				'src/<%= pkg.name %>.js',
 				'test/*.js'
 			]
@@ -100,7 +100,7 @@ module.exports = function (grunt) {
 		grunt.log.ok('1 sourcemap created.');
 	});
 
-	// aliases
+	// Aliases
 	grunt.registerTask('test', ['eslint', 'nodeunit']);
 	grunt.registerTask('build', ['concat', 'babel']);
 	grunt.registerTask('default', ['build', 'test', 'babili', 'uglify']);
