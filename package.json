@@ -2,11 +2,11 @@
   "name": "thaw-sieve-of-eratosthenes",
   "version": "0.0.0",
   "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
-  "main": "lib/thaw-sieve-of-eratosthenes",
-  "homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes#readme",
+  "main": "thaw-sieve-of-eratosthenes.js",
+  "homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes.git"
+    "url": "git://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes.git"
   },
   "bugs": {
     "url": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes/issues"
@@ -15,23 +15,24 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "babel-preset-es2015": "~6.18.0",
-    "babili": "0.0.12",
-    "grunt": "~1.0.1",
-    "grunt-babel": "~6.0.0",
-    "grunt-cli": "~1.2.0",
-    "grunt-contrib-concat": "~1.0.1",
-    "grunt-contrib-nodeunit": "~1.0.0",
-    "grunt-contrib-uglify": "~3.0.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-eslint": "~19.0.0"
+    "babel-core": "^6.26.0",
+    "babel-minify": "^0.3.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^20.1.0",
+    "grunt-replace": "^1.0.1"
   },
+  "engineStrict": true,
   "engines": {
-    "node": ">= 0.4.0"
+    "node": ">=7.6.0"
   },
   "keywords": [
-    "Eratosthenes",
-    "prime",
+    "Ertosthenes",
+    "prime numbers",
     "sieve"
   ],
   "license": "MIT",

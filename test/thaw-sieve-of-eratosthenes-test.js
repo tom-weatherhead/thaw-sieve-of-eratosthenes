@@ -1,18 +1,11 @@
-var engine = require('..');
+const path = require('path'),
+	engine = require(path.join(__dirname, '..', 'lib', 'thaw-sieve-of-eratosthenes.js'));
 
-exports.sieve = {
-	/*
-	setUp: function (done) {
-		// this.edgecase	= ;
-		// this.neg			= ;
-		// this.byte		= ;
-		this.zero			= 0;
-		// this.invld		= ;
-		// this.huge		= ;
-		// this.small		= ;
-		done();
-	}*/
-	tests: function (test) {
+exports.lifecycle = {
+	test: function (test) {
+		test.expect(10);
+		test.equal(0, 0, 'Should be `0`');
+
 		test.deepEqual(engine.sieve(2),				[],									'Should be []');
 		test.deepEqual(engine.sieve(3),				[2],								'Should be [2]');
 		test.deepEqual(engine.sieve(10),			[2, 3, 5, 7],						'Should be [2, 3, 5, 7]');
