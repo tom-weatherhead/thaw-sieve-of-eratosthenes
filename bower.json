@@ -1,20 +1,22 @@
 {
-  "name": "tiny-graph",
-  "homepage": "https://github.com/avoidwork/tiny-graph",
+  "name": "thaw-sieve-of-eratosthenes",
+  "homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes",
   "authors": [
-    "Jason Mulligan <jason.mulligan@avoidwork.com>"
+    "Tom Weatherhead"
   ],
-  "description": "Tiny graph data structure for Client or Server",
-  "main": "lib/tiny-graph.js",
+  "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
+  "main": "lib/thaw-sieve-of-eratosthenes.js",
   "moduleType": [
     "amd",
     "globals",
     "node"
   ],
   "keywords": [
-    "graph"
+    "Eratosthenes",
+    "prime numbers",
+    "sieve"
   ],
-  "license": "BSD-3",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",

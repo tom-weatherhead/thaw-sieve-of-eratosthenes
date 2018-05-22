@@ -1,7 +1,7 @@
 /.idea/
 /node_modules/
-/lib/tiny-graph.min.js
-/lib/tiny-graph.min.js.map
+/lib/thaw-sieve-of-eratosthenes.min.js
+/lib/thaw-sieve-of-eratosthenes.min.js.map
 /src/
 /test/
 .git

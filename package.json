@@ -2,7 +2,7 @@
   "name": "thaw-sieve-of-eratosthenes",
   "version": "0.0.0",
   "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
-  "main": "thaw-sieve-of-eratosthenes.js",
+  "main": "lib/thaw-sieve-of-eratosthenes.js",
   "homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes",
   "repository": {
     "type": "git",
@@ -31,7 +31,7 @@
     "node": ">=7.6.0"
   },
   "keywords": [
-    "Ertosthenes",
+    "Eratosthenes",
     "prime numbers",
     "sieve"
   ],
