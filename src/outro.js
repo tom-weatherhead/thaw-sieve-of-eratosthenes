@@ -1,14 +1,17 @@
 	// Node, AMD & window supported
+
+	const version = '{{VERSION}}';
+
 	if (typeof exports !== 'undefined') {
 		module.exports = {
-			version: "{{VERSION}}",
+			version: version,
 			sieve: sieve,
 			factorize: factorize
 		};
 	} else if (typeof define === 'function' && define.amd !== void 0) {
 		define(() => {
 			return {
-				version: "{{VERSION}}",
+				version: version,
 				sieve: sieve,
 				factorize: factorize
 			};

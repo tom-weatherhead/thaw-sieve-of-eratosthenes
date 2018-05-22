@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 		eslint: {
 			target: [
 				'Gruntfile.js',
-				//'lib/<%= pkg.name %>.js',
+				'lib/<%= pkg.name %>.js',
 				'test/*.js'
 			]
 		},
