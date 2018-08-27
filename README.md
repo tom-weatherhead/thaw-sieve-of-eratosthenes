@@ -1,6 +1,6 @@
 # thaw-sieve-of-eratosthenes
 
-[![build status](https://secure.travis-ci.org/tom-weatherhead/thaw-sieve-of-eratosthenes.svg)](http://travis-ci.org/tom-weatherhead/thaw-sieve-of-eratosthenes)
+[![build status](https://secure.travis-ci.org/tom-weatherhead/thaw-sieve-of-eratosthenes.svg)](http://travis-ci.org/tom-weatherhead/thaw-sieve-of-eratosthenes)  [![downloads](https://img.shields.io/npm/dt/thaw-sieve-of-eratosthenes.svg)](https://www.npmjs.com/package/thaw-sieve-of-eratosthenes)
 
 thaw-sieve-of-eratosthenes is a JavaScript implementation of the Sieve of Eratosthenes, an ancient Greek prime number generator.
 
