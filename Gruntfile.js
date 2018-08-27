@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 				banner: '/**\n' +
 				' * <%= pkg.description %>\n' +
 				' *\n' +
-				' * @author <%= pkg.author %>\n' +
+				' * @author <%= pkg.author.name %>\n' +
 				' * @copyright <%= grunt.template.today(\'yyyy\') %>\n' +
 				' * @license <%= pkg.license %>\n' +
 				' * @version <%= pkg.version %>\n' +
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 			dist: {
 				src: [
 					'src/intro.js',
-					'src/thaw-sieve-of-eratosthenes.js',
+					'src/<%= pkg.name %>.js',
 					'src/outro.js'
 				],
 				dest: 'lib/<%= pkg.name %>.js'
@@ -36,6 +36,7 @@ module.exports = function (grunt) {
 				options: {
 					patterns: [
 						{
+							// TODO: Make this a replace-all (i.e. /.../g) rather than a replace-first.
 							match: /{{VERSION}}/,
 							replacement: '<%= pkg.version %>'
 						}
