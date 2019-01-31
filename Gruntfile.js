@@ -1,6 +1,9 @@
-module.exports = function (grunt) {
+module.exports = grunt => {
+	const packageJsonFilename = 'package.json';
+	const packageJsonContents = grunt.file.readJSON(packageJsonFilename);
+
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+		pkg: packageJsonContents,
 		concat: {
 			options: {
 				banner: '/**\n' +
@@ -20,16 +23,6 @@ module.exports = function (grunt) {
 				],
 				dest: 'lib/<%= pkg.name %>.js'
 			}
-		},
-		eslint: {
-			target: [
-				'Gruntfile.js',
-				'lib/<%= pkg.name %>.js',
-				'test/*.js'
-			]
-		},
-		nodeunit: {
-			all: ['test/*.js']
 		},
 		replace: {
 			dist: {
@@ -54,6 +47,16 @@ module.exports = function (grunt) {
 				]
 			}
 		},
+		eslint: {
+			target: [
+				'Gruntfile.js',
+				'lib/<%= pkg.name %>.js',
+				'test/*.js'
+			]
+		},
+		nodeunit: {
+			all: ['test/*.js']
+		} /* ,
 		watch: {
 			js: {
 				files: '<%= concat.dist.src %>',
@@ -63,22 +66,23 @@ module.exports = function (grunt) {
 				files: 'package.json',
 				tasks: 'default'
 			}
-		}
+		} */
 	});
 
 	// tasks
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-nodeunit');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	// grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-eslint');
 	grunt.loadNpmTasks('grunt-replace');
 
-	grunt.task.registerTask('babili', 'Minifies ES2016+ code', function () {
+	grunt.task.registerTask('babili', 'Minifies ES2016+ code', () => {
 		const fs = require('fs'),
 			path = require('path'),
 			data = fs.readFileSync(path.join(__dirname, 'lib', 'thaw-sieve-of-eratosthenes.js'), 'utf8').replace('\'use strict\';', ''), // Stripping 'use strict'; because it's injected
-			pkg = require(path.join(__dirname, 'package.json')),
-			banner = '/*\n ' + new Date().getFullYear() + ' ' + pkg.author + '\n @version ' + pkg.version + '\n*/\n\'use strict\';';
+			// pkg = require(path.join(__dirname, 'package.json')),
+			pkg = packageJsonContents,
+			banner = '/*\n * ' + pkg.name + '\n * Copyright \u00A9 ' + new Date().getFullYear() + ' ' + pkg.author.name + '\n * @version ' + pkg.version + '\n */\n\'use strict\';\n';
 
 		try {
 			const minified = require('babel-core').transform(data, {sourceFileName: 'thaw-sieve-of-eratosthenes.js', sourceMaps: true, presets: ['minify']});
@@ -94,7 +98,7 @@ module.exports = function (grunt) {
 	});
 
 	// aliases
-	grunt.registerTask('test', ['eslint', 'nodeunit']);
 	grunt.registerTask('build', ['concat', 'replace']);
+	grunt.registerTask('test', ['eslint', 'nodeunit']);
 	grunt.registerTask('default', ['build', 'test', 'babili']);
 };

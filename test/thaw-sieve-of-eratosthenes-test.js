@@ -1,5 +1,4 @@
-const path = require('path'),
-	engine = require(path.join(__dirname, '..', 'lib', 'thaw-sieve-of-eratosthenes.js'));
+const engine = require('..');
 
 exports.lifecycle = {
 	test: function (test) {
