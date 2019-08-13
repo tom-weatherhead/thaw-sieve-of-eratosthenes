@@ -1,11 +1,12 @@
-/.idea/
+/.git/
+/examples/
+/insertia/
 /node_modules/
-/lib/thaw-sieve-of-eratosthenes.min.js
-/lib/thaw-sieve-of-eratosthenes.min.js.map
 /src/
 /test/
-.git
+.editorconfig
+.eslintrc
 .gitignore
-.jshintrc
 .travis.yml
 Gruntfile.js
+.DS_Store

@@ -1,43 +1,36 @@
 {
-  "name": "thaw-sieve-of-eratosthenes",
-  "version": "0.0.0",
-  "description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
-  "main": "lib/thaw-sieve-of-eratosthenes.js",
-  "homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes/issues"
-  },
-  "scripts": {
-    "start": "grunt",
-    "test": "grunt test"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-minify": "^0.5.0",
-    "grunt": "^1.0.3",
-    "grunt-cli": "^1.3.2",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-nodeunit": "^2.0.0",
-    "grunt-contrib-uglify": "^4.0.0",
-    "grunt-eslint": "^21.0.0",
-    "grunt-replace": "^1.0.1"
-  },
-  "engineStrict": true,
-  "engines": {
-    "node": ">=8"
-  },
-  "keywords": [
-    "Eratosthenes",
-    "prime numbers",
-    "sieve"
-  ],
-  "license": "MIT",
-  "author": {
-    "name": "Tom Weatherhead",
-    "url": "https://github.com/tom-weatherhead"
-  }
+	"name": "thaw-sieve-of-eratosthenes",
+	"shortName": "sieve",
+	"version": "0.0.1",
+	"description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
+	"main": "dist/sieve",
+	"main2": "lib/thaw-sieve-of-eratosthenes.js",
+	"homepage": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes.git"
+	},
+	"bugs": {
+		"url": "https://github.com/tom-weatherhead/thaw-sieve-of-eratosthenes/issues"
+	},
+	"scripts": {
+		"build": "npm i && grunt",
+		"clean": "rm -rf node_modules && rm -f package-lock.json",
+		"start": "grunt",
+		"test": "grunt test"
+	},
+	"devDependencies": {
+		"babel-mixin": "^0.0.4"
+	},
+	"engineStrict": true,
+	"engines": {
+		"node": ">= 8"
+	},
+	"keywords": [
+		"Eratosthenes",
+		"prime numbers",
+		"sieve"
+	],
+	"author": "Tom Weatherhead <null@2hrd4u.org> (https://httpbin.org/status/418)",
+	"license": "MIT"
 }
