@@ -1,7 +1,7 @@
 {
 	"name": "thaw-sieve-of-eratosthenes",
 	"shortName": "sieve",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "The Sieve of Eratosthenes (an ancient Greek prime number generator) as a JavaScript library",
 	"main": "dist/sieve",
 	"main2": "lib/thaw-sieve-of-eratosthenes.js",

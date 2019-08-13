@@ -9,4 +9,5 @@
 .gitignore
 .travis.yml
 Gruntfile.js
+*.tgz
 .DS_Store
