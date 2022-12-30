@@ -20,7 +20,7 @@
 		"test": "grunt test"
 	},
 	"devDependencies": {
-		"babel-mixin": "^0.0.4"
+		"babel-mixin": "^0.1.0"
 	},
 	"engineStrict": true,
 	"engines": {
